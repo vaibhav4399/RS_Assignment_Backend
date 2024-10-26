@@ -4,6 +4,7 @@ import compression from 'compression';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import errorHandler from './middlewares/errorHandler';
+import authRouter from './routes/authRoutes';
 
 
 const app: Application = express();
@@ -22,7 +23,7 @@ app.use(helmet());
 
 //**Routes */
 
-
+app.use('api/auth', authRouter);
 
 //** Error handler Middleware */
 
