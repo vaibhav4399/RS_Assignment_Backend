@@ -3,7 +3,7 @@ import { Request, Response, NextFunction } from "express";
 import { customAPIError } from "./errorHandler";
 
 
-const validateRequest  = (req: Request, res: Response, next: NextFunction) => {
+const validateRequest  = (req: Request, _res: Response, next: NextFunction) => {
 
     const errors = validationResult(req);
 
